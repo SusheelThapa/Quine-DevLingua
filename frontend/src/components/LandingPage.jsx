@@ -28,7 +28,7 @@ const LandingPage = () => {
         <span className="text-white">dev</span>
         <span className="text-green-400	bold underline">Lingua</span>
       </h1>
-      <div className="text-4xl font-family-poppins mb-5">
+      <div className="text-4xl  mb-5">
         Transforming Coding with{" "}
         <span
           className="text-orange-500 underline bold"
