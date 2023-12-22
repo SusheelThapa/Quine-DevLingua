@@ -27,7 +27,7 @@ const App = () => {
         <span className="text-white">dev</span>
         <span className="text-green-400	bold underline">Quine</span>
       </h1>
-      <div className="text-4xl font-family-poppins">
+      <div className="text-4xl font-family-poppins mb-5">
         Transforming Coding with{" "}
         <span
           className="text-orange-500 underline bold"
@@ -35,6 +35,9 @@ const App = () => {
         ></span>
         .
       </div>
+      <button className="rounded-[15px] bg-teal-500 m-6 py-3 px-4 text-3xl font-semibold  font-family-poppins tracking-wider hover:bg-teal-700">
+        Getting Started
+      </button>
     </div>
   );
 };
