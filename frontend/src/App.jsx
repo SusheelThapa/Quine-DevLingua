@@ -1,4 +1,5 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 
 import ParticleAnimation from "./components/ParticleAnimation";
 import LandingPage from "./components/LandingPage";
@@ -6,8 +7,17 @@ import LandingPage from "./components/LandingPage";
 const App = () => {
   return (
     <React.Fragment>
-      <ParticleAnimation />
-      <LandingPage />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <ParticleAnimation />
+              <LandingPage />
+            </>
+          }
+        />
+      </Routes>
     </React.Fragment>
   );
 };
