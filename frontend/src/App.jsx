@@ -1,6 +1,15 @@
+import React from "react";
+
+import ParticleAnimation from "./components/ParticleAnimation";
+import LandingPage from "./components/LandingPage";
 
 const App = () => {
-  return <h1 className="text-3xl font-bold underline">devQuine</h1>;
+  return (
+    <React.Fragment>
+      <ParticleAnimation />
+      <LandingPage />
+    </React.Fragment>
+  );
 };
 
 export default App;
