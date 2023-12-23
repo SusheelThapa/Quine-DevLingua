@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "question": "What is JavaScript?",
+      "answer": "JavaScript is a high-level, interpreted programming language."
+    },
+    {
+      "question": "How do you declare a variable in JavaScript?",
+      "answer": "You can declare a variable using the 'var', 'let', or 'const' keyword."
+    },
+    {
+      "question": "What is a function in JavaScript?",
+      "answer": "A function is a reusable block of code that performs a specific task."
+    },
+    {
+      "question": "How do you write a comment in JavaScript?",
+      "answer": "You can write a comment using '//' for single-line comments and '/* */' for multi-line comments."
+    },
+    {
+      "question": "What is the DOM in JavaScript?",
+      "answer": "The DOM (Document Object Model) is a programming interface for web documents."
+    },
+    {
+      "question": "What is an event handler in JavaScript?",
+      "answer": "An event handler is a function that responds to specific events, such as a button click."
+    },
+    {
+      "question": "How do you add an element to an array in JavaScript?",
+      "answer": "You can use the 'push()' method to add an element to the end of an array."
+    },
+    {
+      "question": "What is 'NaN' in JavaScript?",
+      "answer": "'NaN' stands for 'Not-a-Number' and is a special value representing an unrepresentable value in JavaScript."
+    },
+    {
+      "question": "What does 'JSON' stand for?",
+      "answer": "'JSON' stands for 'JavaScript Object Notation' and is a lightweight data interchange format."
+    },
+    {
+      "question": "What is 'callback' in JavaScript?",
+      "answer": "A callback is a function that is passed as an argument to another function and is executed after the completion of that function's task."
+    }
+  ]
+}
