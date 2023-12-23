@@ -5,6 +5,7 @@ import ParticleAnimation from "./components/ParticleAnimation";
 import LandingPage from "./components/LandingPage";
 import HomePage from "./components/HomePage";
 
+
 const App = () => {
   return (
     <React.Fragment>
