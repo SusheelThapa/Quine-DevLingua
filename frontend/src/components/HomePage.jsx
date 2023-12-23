@@ -5,6 +5,8 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import { GiBrain } from "react-icons/gi";
 import { GrLanguage } from "react-icons/gr";
 
+import CodeMaster from "./CodeMaster";
+
 const HomePage = ({ active_feature }) => {
   const features = [
     { label: "codeinsight", icon: <FaMagnifyingGlass /> },
@@ -15,6 +17,8 @@ const HomePage = ({ active_feature }) => {
   return (
     <div>
       <Header features={features} active_feature={active_feature} />
+
+      {active_feature == "codemaster" && <CodeMaster />}
     </div>
   );
 };
