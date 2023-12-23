@@ -7,6 +7,7 @@ import { GrLanguage } from "react-icons/gr";
 
 import CodeMaster from "./CodeMaster";
 import Footer from "./Footer";
+import Editor from "./Editor";
 
 const HomePage = ({ active_feature }) => {
   const features = [
@@ -20,7 +21,7 @@ const HomePage = ({ active_feature }) => {
       <Header features={features} active_feature={active_feature} />
 
       {active_feature == "codemaster" && <CodeMaster />}
-
+      {active_feature == "codelingo" && <Editor />}
       <Footer />
     </div>
   );
