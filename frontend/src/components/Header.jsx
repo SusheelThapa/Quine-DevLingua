@@ -1,4 +1,3 @@
-import { FaMagnifyingGlass } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Header = ({ features, active_feature }) => {
@@ -11,16 +10,16 @@ const Header = ({ features, active_feature }) => {
 
       <div>
         <ul className="flex justify-center items-center text-white text-l">
-          {features.map((feature) => {
+          {features.map(({ label, icon }) => {
             return (
-              <Link to={`/${feature}`} key={feature}>
+              <Link to={`/${label}`} key={label}>
                 <li
                   className={`hover:text-green-500 ml-20 flex justify-center items-center ${
-                    active_feature == feature ? "text-green-500" : ""
+                    active_feature == label ? "text-green-500" : ""
                   }`}
                 >
-                  <FaMagnifyingGlass className="text-lg" />
-                  <span className="ps-2">{feature}</span>
+                  {icon}
+                  <span className="ps-2">{label}</span>
                 </li>
               </Link>
             );
