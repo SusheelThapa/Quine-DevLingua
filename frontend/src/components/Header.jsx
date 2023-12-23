@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { Link } from "react-router-dom";
 
 const Header = ({ features, active_feature }) => {
@@ -28,6 +30,11 @@ const Header = ({ features, active_feature }) => {
       </div>
     </div>
   );
+};
+
+Header.propTypes = {
+  features: PropTypes.array,
+  active_feature: PropTypes.string,
 };
 
 export default Header;

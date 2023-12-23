@@ -1,4 +1,5 @@
 import Header from "./Header";
+import PropsTypes from "prop-types";
 
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { GiBrain } from "react-icons/gi";
@@ -16,6 +17,10 @@ const HomePage = ({ active_feature }) => {
       <Header features={features} active_feature={active_feature} />
     </div>
   );
+};
+
+HomePage.propTypes = {
+  active_feature: PropsTypes.string,
 };
 
 export default HomePage;
