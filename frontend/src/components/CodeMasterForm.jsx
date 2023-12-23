@@ -7,7 +7,6 @@ const CodeMasterForm = ({ handleSubmit }) => {
   
   return (
     <form
-      className="w-1/3"
       onSubmit={(e) => {
         e.preventDefault();
         handleSubmit(topic, numQuestions);
