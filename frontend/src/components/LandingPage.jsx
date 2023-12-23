@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 import Typed from "typed.js";
-
+import { Link } from "react-router-dom";
 const LandingPage = () => {
   const typed_text = useRef(null);
 
@@ -37,7 +37,7 @@ const LandingPage = () => {
         .
       </div>
       <button className="rounded-[15px] bg-teal-500 m-6 py-3 px-4 text-3xl font-semibold  font-family-poppins tracking-wider hover:bg-teal-700">
-        Get Started
+        <Link to={"/codeinsight"}>Get Started</Link>
       </button>
     </div>
   );
