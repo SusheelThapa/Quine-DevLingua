@@ -19,7 +19,21 @@ const App = () => {
             </>
           }
         />
-        <Route exact path="/homepage" element={<HomePage />} />
+        <Route
+          exact
+          path="/codeinsight"
+          element={<HomePage active_feature="codeinsight" />}
+        />
+        <Route
+          exact
+          path="/codemaster"
+          element={<HomePage active_feature="codemaster" />}
+        />
+        <Route
+          exact
+          path="/codelingo"
+          element={<HomePage active_feature="codelingo" />}
+        />
       </Routes>
     </React.Fragment>
   );
