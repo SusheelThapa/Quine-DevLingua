@@ -1,10 +1,12 @@
 import Header from "./Header";
 
-const HomePage = () => {
+const HomePage = ({ active_feature }) => {
+  const features = ["codeinsight", "codemaster", "codelingo"];
+
   return (
-    <>
-      <Header />
-    </>
+    <div>
+      <Header features={features} active_feature={active_feature} />
+    </div>
   );
 };
 
