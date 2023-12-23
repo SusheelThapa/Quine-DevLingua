@@ -1,6 +1,7 @@
-import FlashCard from "./common/FlashCard";
 import CodeMasterForm from "./CodeMasterForm";
+import FlashCardCarousel from "./FlashCardCarousel";
 
+import flashCardsDetail from "../json/flashcard.json";
 const CodeMaster = () => {
   const handleSubmit = (topic, numQuestions) => {
     console.log(`Form Submitted with ${numQuestions} question on ${topic}`);
@@ -10,11 +11,7 @@ const CodeMaster = () => {
   return (
     <div className="flex justify-around items-center  m-10 p-10">
       <CodeMasterForm handleFormSubmit={handleSubmit} />
-      <FlashCard
-        className="w-2/3"
-        question="What is JavaScript?"
-        answer="JavaScript is a high-level, interpreted programming language."
-      />
+      <FlashCardCarousel flashCardsDetail={flashCardsDetail} />
     </div>
   );
 };
