@@ -1,30 +1,31 @@
-import { useState } from "react";
-
 import AceEditor from "react-ace";
 
 import PropTypes from "prop-types";
 
-const Editor = ({ read_only, autofocus }) => {
-  const [code, setCode] = useState("");
-  const [language, setLanguage] = useState("javascript");
-  const [theme, setTheme] = useState("kuroir");
-
-  const handleLanguageChange = (event) => {
-    setLanguage(event.target.value);
-  };
-
-  const handleThemeChange = (event) => {
-    setTheme(event.target.value);
-  };
-
+const Editor = ({
+  read_only,
+  autofocus,
+  code,
+  onCodeChange,
+  language,
+  theme,
+  onLanguageChange,
+  onThemeChange,
+}) => {
   return (
     <div className="m-2 mb-10 p-5">
       <div className="  flex justify-around items-end  mb-8">
-        <div>
+        <div className="flex justify-center items-center gap-3">
+          <label htmlFor="language" className=" text-center text-lg">
+            Language:
+          </label>
           <select
-            onChange={handleLanguageChange}
+            key="language"
+            onChange={(e) => {
+              onLanguageChange(e.target.value);
+            }}
             value={language}
-            className="mt-1  w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-indigo-500 sm:text-base appearance-none flex justify-center items-center"
+            className="mt-1  w-full text-center py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-indigo-500 sm:text-base appearance-none flex justify-center items-center"
           >
             <option value="javascript">JavaScript</option>
             <option value="python">Python</option>
@@ -32,9 +33,15 @@ const Editor = ({ read_only, autofocus }) => {
             <option value="c_cpp">C/C++</option>
           </select>
         </div>
-        <div>
+        <div className="flex justify-center items-center gap-3">
+          <label htmlFor="theme" className=" text-center text-lg">
+            Theme:
+          </label>
           <select
-            onChange={handleThemeChange}
+            id="theme"
+            onChange={(e) => {
+              onThemeChange(e.target.value);
+            }}
             value={theme}
             className="mt-1 flex justify-center items-center text-center w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-indigo-500 sm:text-base appearance-none"
           >
@@ -49,8 +56,8 @@ const Editor = ({ read_only, autofocus }) => {
         mode={language}
         theme={theme}
         value={code}
-        fontSize={24}
-        onChange={setCode}
+        fontSize={20}
+        onChange={onCodeChange}
         name="code_editor"
         height="65vh"
         width="600px"
@@ -63,8 +70,8 @@ const Editor = ({ read_only, autofocus }) => {
           enableBasicAutocompletion: true,
           enableLiveAutocompletion: true,
           enableSnippets: true,
-          showLineNumbers: false,
-          showGutter: false,
+          showLineNumbers: true,
+          showGutter: true,
         }}
       />
     </div>
@@ -73,6 +80,12 @@ const Editor = ({ read_only, autofocus }) => {
 Editor.propTypes = {
   read_only: PropTypes.bool,
   autofocus: PropTypes.bool,
+  code: PropTypes.string,
+  language: PropTypes.string,
+  theme: PropTypes.string,
+  onCodeChange: PropTypes.func,
+  onLanguageChange: PropTypes.func,
+  onThemeChange: PropTypes.func,
 };
 
 Editor.defaultProps = {
