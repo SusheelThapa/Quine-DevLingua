@@ -19,7 +19,7 @@ const Header = ({ features, active_feature }) => {
                 <Link to={`/${label}`} key={label}>
                   <li
                     className={`hover:text-green-500 ml-20 flex justify-center items-center ${
-                      active_feature == label ? "text-green-500" : ""
+                      active_feature == label ? "text-green-500 font-bold" : ""
                     }`}
                   >
                     {icon}

@@ -1,10 +1,11 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import ParticleAnimation from "./components/ParticleAnimation";
+import ParticleAnimation from "./components/common/ParticleAnimation";
 import LandingPage from "./components/LandingPage";
 import HomePage from "./components/HomePage";
 
+import particlesOptions from "./json/particles.json";
 
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
           path="/"
           element={
             <>
-              <ParticleAnimation />
+              <ParticleAnimation config={particlesOptions} />
               <LandingPage />
             </>
           }

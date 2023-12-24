@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 
-import particlesOptions from "../json/particles.json";
-
-const ParticleAnimation = () => {
+const ParticleAnimation = ({ config }) => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -21,10 +20,12 @@ const ParticleAnimation = () => {
   }, []);
 
   return (
-    <React.Fragment>
-      {init && <Particles options={particlesOptions} />}
-    </React.Fragment>
+    <React.Fragment>{init && <Particles options={config} />}</React.Fragment>
   );
+};
+
+ParticleAnimation.propTypes = {
+  config: PropTypes.object,
 };
 
 export default ParticleAnimation;
