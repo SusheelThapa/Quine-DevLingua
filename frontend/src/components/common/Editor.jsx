@@ -64,7 +64,7 @@ const Editor = ({
         wrapEnabled={true}
         focus={autofocus}
         readOnly={read_only}
-        className={`rounded-lg `}
+        className={`rounded-xl`}
         editorProps={{ $blockScrolling: true }}
         setOptions={{
           enableBasicAutocompletion: true,

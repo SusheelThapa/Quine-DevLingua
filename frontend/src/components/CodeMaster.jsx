@@ -9,7 +9,6 @@ const CodeMaster = () => {
     // API Call
   };
 
-  console.log(data);
   return (
     <div className="flex justify-between bg-gray-50 items-center  p-10 mx-64 m-16 rounded-3xl">
       <CodeMasterForm handleFormSubmit={handleSubmit} />
