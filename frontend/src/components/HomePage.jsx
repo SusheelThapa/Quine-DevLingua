@@ -9,6 +9,7 @@ import CodeMaster from "./CodeMaster";
 import CodeLingo from "./CodeLingo";
 
 import Footer from "./Footer";
+import CodeInsight from "./CodeInsight";
 
 const HomePage = ({ active_feature }) => {
   const features = [
@@ -20,7 +21,7 @@ const HomePage = ({ active_feature }) => {
   return (
     <div>
       <Header features={features} active_feature={active_feature} />
-
+      {active_feature == "codeinsight" && <CodeInsight />}
       {active_feature == "codemaster" && <CodeMaster />}
       {active_feature == "codelingo" && <CodeLingo />}
       <Footer />
