@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 
 const CodeMasterForm = ({ handleSubmit }) => {
-  const [topic, setTopic] = useState("");
-  const [numQuestions, setNumQuestions] = useState("");
+  const [topic, setTopic] = useState("JavaScript");
+  const [numQuestions, setNumQuestions] = useState("10");
   
   return (
     <form
