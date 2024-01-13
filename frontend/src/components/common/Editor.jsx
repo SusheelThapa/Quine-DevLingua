@@ -56,7 +56,7 @@ const Editor = ({
         mode={language}
         theme={theme}
         value={code}
-        fontSize={20}
+        fontSize={24}
         onChange={onCodeChange}
         name="code_editor"
         height="65vh"
@@ -71,7 +71,7 @@ const Editor = ({
           enableLiveAutocompletion: true,
           enableSnippets: true,
           showLineNumbers: true,
-          showGutter: true,
+          showGutter: false,
         }}
       />
     </div>

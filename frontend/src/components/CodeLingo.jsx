@@ -5,11 +5,25 @@ import ParticleAnimation from "./common/ParticleAnimation";
 import codeLingoParticleAnimationConfig from "../json/codeLingo.json";
 
 const CodeLingo = () => {
-  const [sourceCode, setSourceCode] = useState(null);
-  const [sourceCodeLangugae, setSourceCodeLanguage] = useState("javascript");
-  const [sourceCodeTheme, setSourceCodeTheme] = useState("tomorrow");
+  const source_code = `const sum = (a, b) => {
+    return a + b;
+  };
+  
+  sum(4,5);
+  `;
 
-  const [targetCode, setTargetCode] = useState(null);
+  const target_code = `
+  def sum(a,b):
+    return a + b
+  
+  sum(4,5)
+  `;
+
+  const [sourceCode, setSourceCode] = useState(source_code);
+  const [sourceCodeLangugae, setSourceCodeLanguage] = useState("javascript");
+  const [sourceCodeTheme, setSourceCodeTheme] = useState("kuroir");
+
+  const [targetCode, setTargetCode] = useState(target_code);
   const [targetCodeLangugae, setTargetCodeLanguage] = useState("python");
   const [targetCodeTheme, setTargetCodeTheme] = useState("kuroir");
 
