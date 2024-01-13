@@ -3,11 +3,22 @@ import Editor from "./common/Editor";
 import { useState } from "react";
 
 const CodeInsight = () => {
-  const [editorCode, setEditorCode] = useState(null);
+  
+  const code = `const sum = (a, b) => {
+    return a + b;
+  };
+  
+  sum(4,5);
+  `;
+
+  const [editorCode, setEditorCode] = useState(code);
   const [editorCodeLangugae, setEditorCodeLanguage] = useState("javascript");
   const [editorCodeTheme, setEditorCodeTheme] = useState("kuroir");
 
-  const handleGetInsight =()=>{}
+  const cardData =
+    "The JavaScript code defines a function `sum` that adds two input values, `a` and `b`. It aims to provide a simple and reusable way to perform addition. The code employs an arrow function and is straightforward without complex algorithms or techniques.";
+
+  const handleGetInsight = () => {};
   return (
     <div className="bg-gray-50  rounded-2xl mx-64 my-10 flex justify-evenly items-center">
       <div className="flex justify-around items-center flex-col">
@@ -27,7 +38,7 @@ const CodeInsight = () => {
           Get Insight
         </button>
       </div>
-      <Card data="I am susheel thapa" />
+      <Card data={cardData} />
     </div>
   );
 };
