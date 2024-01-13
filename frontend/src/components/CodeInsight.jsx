@@ -22,7 +22,7 @@ const CodeInsight = () => {
         />
         <button
           onClick={handleGetInsight}
-          className="bg-purple-500 text-white  py-2 px-4 mb-5 w-96 rounded-lg text-xl hover:bg-blue-600"
+          className="bg-purple-500 text-white  py-2 px-4 mb-5 w-96 rounded-lg text-xl hover:bg-purple-600"
         >
           Get Insight
         </button>
