@@ -2,11 +2,20 @@ import CodeMasterForm from "./CodeMasterForm";
 import FlashCardCarousel from "./FlashCardCarousel";
 
 import { data } from "../json/flashcard.json";
+import { askOpenAI } from "../services/askOpenAI";
+import { useState } from "react";
 const CodeMaster = () => {
-  const handleSubmit = (topic, numQuestions) => {
-    console.log(`Form Submitted with ${numQuestions} question on ${topic}`);
+  const [data, setData] = useState({ question: "", answer: "" });
 
-    // API Call
+  const handleSubmit = async (topic, numQuestions) => {
+    const prompt = `Generate a flashcard in ${topic} over ${numQuestions} of question`;
+
+    try {
+      const response = await askOpenAI("CodeMaster", prompt);
+      setData(data);
+    } catch (e) {
+      setData({ question: "", answer: "" });
+    }
   };
 
   return (
