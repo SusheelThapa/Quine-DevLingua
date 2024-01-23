@@ -5,14 +5,14 @@ const openai = new OpenAI({
 });
 
 
-export const askOpenAI = async (type, message) => {
+export const askOpenAI = async (type, mes) => {
     const preDefinedPrompt = {
         "CdeLingo": "A",
         "CodeInsight": "B",
         "CodeMaster": "C",
     }
 
-    const prompt = `${preDefinedPrompt[type]}\n ${message}`;
+    const prompt = `${preDefinedPrompt[type]}\n ${mes}`;
 
     const response = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
