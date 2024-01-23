@@ -18,6 +18,7 @@ const CodeInsight = () => {
         Additionally, mention any key algorithms or techniques employed in the code.  `;
 
     try {
+
       const response = await askOpenAI("CodeInsight", prompt);
       setCardData(response);
     } catch (e) {
