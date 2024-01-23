@@ -17,11 +17,13 @@ const FlashCardCarousel = ({ flashCardData }) => {
     setCurrentIndex(currentIndex + 1);
   };
 
-  console.log(`Current index ${currentIndex}`);
   return (
     <div className="carousel-container flex justify-center items-center">
       {currentIndex > 0 && (
-        <button onClick={goToPrevious} className="left-arrow text-2xl text-red-500">
+        <button
+          onClick={goToPrevious}
+          className="left-arrow text-2xl text-red-500"
+        >
           <FaArrowLeft />
         </button>
       )}
@@ -31,7 +33,10 @@ const FlashCardCarousel = ({ flashCardData }) => {
       />
 
       {currentIndex < flashCardData.length - 1 && (
-        <button onClick={goToNext} className="right-arrow text-2xl text-red-500">
+        <button
+          onClick={goToNext}
+          className="right-arrow text-2xl text-red-500"
+        >
           <FaArrowRight />
         </button>
       )}
