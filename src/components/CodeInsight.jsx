@@ -1,7 +1,7 @@
 import Card from "./Card";
 import Editor from "./common/Editor";
 import { useState } from "react";
-import {askOpenAI} from "../services/askOpenAI";
+import { askOpenAI } from "../services/askOpenAI";
 
 const CodeInsight = () => {
   const [editorCode, setEditorCode] = useState("");
@@ -11,6 +11,12 @@ const CodeInsight = () => {
   const [cardData, setCardData] = useState("");
 
   const handleGetInsight = async () => {
+    const prompt = `
+    Given a ${editorCode} in a ${editorCodeLangugae} programming language of your choice, summarize the overall meaning and functionality of the code. 
+        Highlight the main objectives and outcomes without delving into the specific implementation details. 
+        Ensure the summary is concise and captures the essence of the code's purpose. 
+        Additionally, mention any key algorithms or techniques employed in the code.  `;
+
     try {
       const response = await askOpenAI("CodeInsight", editorCode);
       setCardData(response);
