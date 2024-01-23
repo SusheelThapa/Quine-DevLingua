@@ -1,7 +1,7 @@
 import Card from "./Card";
 import Editor from "./common/Editor";
 import { useState } from "react";
-import askOpenAI from "../services/askOpenAI";
+import {askOpenAI} from "../services/askOpenAI";
 
 const CodeInsight = () => {
   const [editorCode, setEditorCode] = useState("");

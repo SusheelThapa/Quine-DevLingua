@@ -1,11 +1,11 @@
 import CodeMasterForm from "./CodeMasterForm";
 import FlashCardCarousel from "./FlashCardCarousel";
 
-import { data } from "../json/flashcard.json";
+import { flashCardData } from "../json/flashcard.json";
 import { askOpenAI } from "../services/askOpenAI";
 import { useState } from "react";
 const CodeMaster = () => {
-  const [data, setData] = useState({ question: "", answer: "" });
+  const [data, setData] = useState(flashCardData);
 
   const handleSubmit = async (topic, numQuestions) => {
     const prompt = `Generate a flashcard in ${topic} over ${numQuestions} of question`;

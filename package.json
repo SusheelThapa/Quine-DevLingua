@@ -13,6 +13,7 @@
     "@tsparticles/engine": "^3.0.2",
     "@tsparticles/react": "^3.0.0",
     "ace-builds": "^1.32.2",
+    "openai": "^4.25.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-ace": "^10.1.0",
