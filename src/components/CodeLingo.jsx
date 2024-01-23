@@ -15,7 +15,7 @@ const CodeLingo = () => {
   const [targetCodeTheme, setTargetCodeTheme] = useState("kuroir");
 
   const handleTranslateButton = async () => {
-    const prompt = `Translate ${sourceCode} from ${sourceCodeLangugae} to ${targetCodeLangugae}...`;
+    const prompt = ` Translate the following ${sourceCode} to ${targetCodeLangugae} `;
 
     try {
       const response = await askOpenAI("CodeLingo", prompt);

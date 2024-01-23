@@ -7,7 +7,7 @@ const openai = new OpenAI({
 
 export const askOpenAI = async (type, prompt) => {
 
-
+    console.log("API call is happening")
     const response = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
         messages: [
@@ -19,6 +19,8 @@ export const askOpenAI = async (type, prompt) => {
     });
 
     const message = response.choices[0];
+    console.log("API call is compleeted")
+
 
     return message.message.content;
 }
